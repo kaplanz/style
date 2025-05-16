@@ -1,15 +1,23 @@
 a {
-  color: color-mix(in oklch, var(--accent) 90%, white);
-  text-decoration-line: none;
+  color: var(--foregd);
+  text-decoration-color: var(--accent);
+  text-decoration-style: wavy;
+  text-decoration-thickness: 8%;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 10%;
   transition:
-    transform .2s ease;
+    color .2s,
+    text-decoration-color .2s,
+    text-decoration-style .2s,
+    text-decoration-thickness .3s,
+    text-underline-offset .3s;
 
   &:hover {
-    color: color-mix(in oklch, var(--accent) 70%, white);
-    text-decoration-line: underline;
-    text-decoration-style: wavy;
-    text-decoration-thickness: .1em;
-    transform: translateY(-2px);
+    color: oklch(from var(--foregd) l c h / .8);
+    text-decoration-color: oklch(from var(--accent) l c h / .2);
+    text-decoration-style: solid;
+    text-decoration-thickness: 125%;
+    text-underline-offset: -100%;
   }
 
   & > code,

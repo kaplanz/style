@@ -1,9 +1,10 @@
 ::placeholder {
-  color: rgb(from var(--foreground) r g b / .5);
+  color: oklch(from var(--foregd) l c h / .5);
 }
 
+input[type="file"],
 fieldset {
-  border: 1px var(--accent) solid;
+  border: 1px solid var(--accent);
   border-radius: 6px;
   margin: 0;
   margin-bottom: 12px;
@@ -15,8 +16,11 @@ legend {
   font-weight: 600;
 }
 
+menu {
+  padding: 0;
+}
+
 button,
-::file-selector-button,
 select,
 input[type="submit"],
 input[type="reset"],
@@ -37,43 +41,67 @@ select {
   display: initial;
 }
 
-input,
+
+input:not([type="file"]),
+select,
 button,
 ::file-selector-button,
-textarea,
-select {
+textarea {
+  --backgd: var(--darken);
+  --border: var(--darker);
+
   font-family: inherit;
   font-size: inherit;
 
-  background: var(--darker);
+  background: var(--backgd);
+  border: 2px solid var(--border);
   border-radius: 6px;
-  border: none;
+  box-shadow: 2.25px 3px var(--shadow);
   outline: none;
-  padding: 10px;
+  padding: 8px;
+  margin: 4px;
+  transition:
+    background .2s,
+    border-color .2s,
+    color .2s,
+    box-shadow .2s,
+    transform .1s;
+
+  &:hover {
+    --border: color-mix(in srgb, var(--darker), var(--accent));
+  }
+
+  &:focus {
+    --border: var(--accent);
+    --shadow: oklch(from var(--accent) l c h / .4);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: .5;
+  }
+
+  &[readonly] {
+    cursor: text;
+  }
 }
 
 input[type="file"] {
   background: inherit;
   border: 1px var(--border) solid;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 button,
 input[type="submit"],
 input[type="reset"],
 input[type="button"] {
-  background: var(--darker);
-  padding-inline: 2em;
-
   &:hover {
-    background: color-mix(in srgb, var(--darker) 70%, var(--accent));
+    --backgd: color-mix(in srgb, var(--darker) 70%, var(--accent));
   }
-}
 
-::file-selector-button:hover {
-  background: color-mix(in srgb, var(--darker) 70%, var(--accent));
-
-  transition:
-    background-color .1s linear;
+  padding-inline: 2em;
 }
 
 input[type="color"] {
@@ -138,30 +166,6 @@ input,
 select,
 button,
 textarea {
-  margin-bottom: 4px;
-
-  &:focus {
-    box-shadow: 0 0 0 2px var(--accent);
-  }
-
-  &:disabled {
-    cursor: not-allowed;
-    opacity: .5;
-  }
-
-  &[readonly] {
-    cursor: text;
-  }
-
-  &:focus,
-  &:hover {
-    transition:
-      background-color .1s linear,
-      border-color .1s linear,
-      color .1s linear,
-      box-shadow .1s linear,
-      transform .1s ease;
-  }
 }
 
 button,
@@ -174,4 +178,19 @@ input[type="range"] {
   &:active {
     transform: translateY(2px);
   }
+}
+
+::file-selector-button {
+  cursor: pointer;
+  margin: 0;
+}
+
+::file-selector-button:hover {
+  --backgd: color-mix(in srgb, var(--darker) 70%, var(--accent));
+  --border: color-mix(in srgb, var(--darker), var(--accent));
+}
+
+::file-selector-button:focus {
+  --border: var(--accent);
+  --shadow: oklch(from var(--accent) l c h / .4);
 }

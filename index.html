@@ -11,8 +11,8 @@
 
   <!-- Styles -->
   <link rel="stylesheet" type="text/css" href="src/main.css" />
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ddf2d1" />
-  <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#223b52" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ddf3d2" />
+  <meta name="theme-color" media="(prefers-color-scheme: dark)"  content="#203b50" />
 </head>
 
 <body>
@@ -29,6 +29,8 @@
         table with sample data, as well as a form to gather user input.
       </p>
     </section>
+
+    <input type="file" name="file"></input>
 
     <hr />
 
@@ -63,7 +65,7 @@
           > div {
             aspect-ratio: 1;
             border-radius: 25%;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            box-shadow: 0 2px 4px oklch(0% 0 0 / .2);
 
             &[title="red"]    { background: var(--red)    }
             &[title="orange"] { background: var(--orange) }

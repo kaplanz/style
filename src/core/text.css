@@ -48,13 +48,13 @@ address {
 }
 
 mark {
-  background: rgb(from var(--marker) r g b / .5);
+  background: oklch(from var(--marker) l c h / .5);
   border-radius: 2px;
   padding: 0 2px 0 2px;
   color: inherit;
 }
 
 ::selection {
-  background: rgb(from var(--accent) r g b / .3);
+  background: oklch(from var(--accent) l c h / .3);
   color: inherit;
 }

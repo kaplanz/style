@@ -21,16 +21,16 @@
   --pink:   light-dark(rgb(255, 045, 085), rgb(255, 055, 095));
   --brown:  light-dark(rgb(162, 132, 094), rgb(172, 142, 104));
   /* Accent */
-  --accent: light-dark(#b3063e, #ff245a);
+  --accent: light-dark(oklch(50% 0.18 14), oklch(65% 0.20 14));
   /* Primary */
-  --background: light-dark(#fafaf3, #151a1f);
-  --foreground: light-dark(#223b52, #f3f3e4);
+  --backgd: light-dark(oklch(98% .01 105), oklch(25% .02 245));
+  --foregd: light-dark(oklch(34% .05 245), oklch(96% .02 105));
   /* Layer */
-  --darken: color-mix(in srgb, var(--background) 95%, light-dark(black, white));
-  --darker: color-mix(in srgb, var(--background) 90%, light-dark(black, white));
+  --darken: color-mix(in oklch, var(--backgd) 95%, light-dark(black, white));
+  --darker: color-mix(in oklch, var(--backgd) 90%, light-dark(black, white));
   /* Features */
-  --banner: light-dark(#ddf2d1, #223b52);
+  --banner: light-dark(oklch(94% 0.05 135), oklch(34% .05 245));
   --border: var(--accent);
   --marker: var(--yellow);
-  --shadow: #112233;
+  --shadow: light-dark(oklch(0% 0 0 / .2), oklch(40% 0 0 / .2));
 }
