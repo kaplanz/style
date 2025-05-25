@@ -1,0 +1,14 @@
+/* Normal */
+@font-face {
+  font-family: "Maple Mono";
+  font-weight: 100 900;
+  src: url("fonts/MapleMono[wght].ttf") format("truetype");
+}
+
+/* Italic */
+@font-face {
+  font-family: "Maple Mono";
+  font-weight: 100 900;
+  font-style: italic;
+  src: url("fonts/MapleMono-Italic[wght].ttf") format("truetype");
+}
