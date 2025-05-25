@@ -1,0 +1,31 @@
+nav.crumb {
+  display: inline-block;
+
+  inline-size: fit-content;
+
+  font-family: var(--mono);
+  font-weight: normal;
+
+  ul {
+    display: flex;
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: flex;
+      place-items: center;
+
+      &:first-child a::before {
+        content: "~";
+      }
+    }
+  }
+
+  a {
+    --detail: var(--accent);
+
+    text-decoration: none;
+  }
+}

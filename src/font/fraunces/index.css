@@ -1,0 +1,14 @@
+/* Normal */
+@font-face {
+  font-family: "Fraunces";
+  font-weight: 100 900;
+  src: url("fonts/Fraunces[SOFT,WONK,opsz,wght].ttf") format("truetype");
+}
+
+/* Italic */
+@font-face {
+  font-family: "Fraunces";
+  font-weight: 100 900;
+  font-style: italic;
+  src: url("fonts/Fraunces-Italic[SOFT,WONK,opsz,wght].ttf") format("truetype");
+}
