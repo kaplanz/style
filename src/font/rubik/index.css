@@ -1,0 +1,14 @@
+/* Normal */
+@font-face {
+  font-family: "Rubik";
+  font-weight: 100 900;
+  src: url("fonts/Rubik[wght].ttf") format("truetype");
+}
+
+/* Italic */
+@font-face {
+  font-family: "Rubik";
+  font-weight: 100 900;
+  font-style: italic;
+  src: url("fonts/Rubik-Italic[wght].ttf") format("truetype");
+}

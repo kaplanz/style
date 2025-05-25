@@ -1,0 +1,35 @@
+code,
+kbd,
+pre,
+samp,
+time {
+  font: normal 14px var(--mono);
+}
+
+code,
+kbd,
+samp {
+  background: var(--darken);
+  border: 1px solid var(--darker);
+  border-radius: 6px;
+  padding: 1px 2px;
+}
+
+kbd {
+  border: 1px solid var(--border);
+}
+
+pre {
+  max-inline-size: 100%;
+
+  > code {
+    border: 1px solid var(--border);
+    display: block;
+    overflow-x: auto;
+    padding: 10px;
+  }
+
+  &:not(:has(> code)) {
+    overflow-x: auto;
+  }
+}
