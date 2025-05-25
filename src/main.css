@@ -1,0 +1,57 @@
+@import "core/index.css";
+@import "font/index.css";
+@import "part/index.css";
+
+:root {
+  /*
+   * Colors
+   */
+  color-scheme: light dark;
+  accent-color: var(--accent);
+  /* Palette */
+  --red:    light-dark(rgb(255, 059, 048), rgb(255, 069, 058));
+  --orange: light-dark(rgb(255, 149, 000), rgb(255, 159, 010));
+  --yellow: light-dark(rgb(255, 204, 010), rgb(255, 214, 010));
+  --green:  light-dark(rgb(052, 199, 089), rgb(048, 209, 088));
+  --mint:   light-dark(rgb(000, 199, 190), rgb(099, 230, 226));
+  --teal:   light-dark(rgb(048, 176, 199), rgb(064, 200, 224));
+  --cyan:   light-dark(rgb(050, 173, 230), rgb(100, 210, 255));
+  --blue:   light-dark(rgb(000, 122, 255), rgb(010, 132, 255));
+  --indigo: light-dark(rgb(088, 086, 214), rgb(094, 092, 230));
+  --purple: light-dark(rgb(175, 082, 222), rgb(191, 090, 242));
+  --pink:   light-dark(rgb(255, 045, 085), rgb(255, 055, 095));
+  --brown:  light-dark(rgb(162, 132, 094), rgb(172, 142, 104));
+  /* Accent */
+  --accent: light-dark(oklch(50% .18 14), oklch(65% .20 14));
+  /* Primary */
+  --backgd: light-dark(oklch(98% .01 105), oklch(25% .02 245));
+  --foregd: light-dark(oklch(34% .05 245), oklch(96% .02 105));
+  /* Layer */
+  --darken: color-mix(in oklch, var(--backgd) 95%, light-dark(black, white));
+  --darker: color-mix(in oklch, var(--backgd) 90%, light-dark(black, white));
+  /* Features */
+  --banner: light-dark(oklch(94% 0.05 135), oklch(34% .05 245));
+  --border: var(--accent);
+  --marker: var(--yellow);
+  --shadow: light-dark(oklch(0% 0 0 / .2), oklch(40% 0 0 / .2));
+
+  /*
+   * Typefaces
+   */
+  --mono:  "Maple Mono";
+  --sans:  "Geologica";
+  --serif: "Fraunces";
+
+  /*
+   * Shapes
+   */
+  --vmark: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 17" width="19" height="17" fill="none"><path d="M2 9L7 15" stroke="black" stroke-width="4" stroke-linecap="round" /><path d="M7 15L17 2" stroke="black" stroke-width="4" stroke-linecap="round" /></svg>');
+  --xlink: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"></path></svg>');
+  --slink: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>');
+}
+
+@media not (prefers-reduced-motion: reduce) {
+  @view-transition {
+    navigation: auto;
+  }
+}

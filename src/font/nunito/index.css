@@ -1,0 +1,14 @@
+/* Normal */
+@font-face {
+  font-family: "Nunito";
+  font-weight: 100 900;
+  src: url("fonts/Nunito[wght].ttf") format("truetype");
+}
+
+/* Italic */
+@font-face {
+  font-family: "Nunito";
+  font-weight: 100 900;
+  font-style: italic;
+  src: url("fonts/Nunito-Italic[wght].ttf") format("truetype");
+}
