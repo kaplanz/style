@@ -1,0 +1,19 @@
+/* Latin */
+@font-face {
+  font-family: 'Maple Mono';
+  font-display: swap;
+  font-weight: 100 900;
+  src: url('fonts/MapleMono[wght].ttf') format('truetype');
+}
+
+/* ---------------------------------------------------------------------------- */
+/* ITALICS */
+
+/* Latin */
+@font-face {
+  font-family: 'Maple Mono';
+  font-display: swap;
+  font-weight: 100 900;
+  font-style: italic;
+  src: url('fonts/MapleMono-Italic[wght].ttf') format('truetype');
+}
