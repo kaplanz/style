@@ -67,39 +67,8 @@ body {
     border-block-start: 6px solid var(--lining);
   }
 
-  @media (max-width: 640px) {
-    > main {
-      inline-size: 100%;
-    }
-  }
-
-  @media (min-width: 640px) {
-    > main {
-      inline-size: 640px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    > main {
-      inline-size: 640px;
-    }
-  }
-
-  @media (min-width: 1024px) {
-    > main {
-      inline-size: 768px;
-    }
-  }
-
-  @media (min-width: 1280px) {
-    > main {
-      inline-size: 1024px;
-    }
-  }
-
-  @media (min-width: 1536px) {
-    > main {
-      inline-size: 1280px;
-    }
+  > main {
+    inline-size: 100%;
+    max-inline-size: 768px;
   }
 }
