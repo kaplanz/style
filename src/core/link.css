@@ -27,7 +27,7 @@ a {
   }
 }
 
-a:not(.plain) {
+a:not(.plain):not(:has(*)) {
   margin: 0 -2px;
   padding: 0 2px;
 
