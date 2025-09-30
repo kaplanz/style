@@ -3,6 +3,12 @@ a {
 
   color: inherit;
 
+  text-decoration: underline;
+  text-decoration-color: oklch(from var(--detail) l c h / .5);
+  text-decoration-style: solid;
+  text-decoration-thickness: 2px;
+  text-decoration-skip-ink: none;
+
   transition:
     color .2s,
     background .2s,
@@ -12,18 +18,7 @@ a {
 
   &:hover {
     --detail: var(--accent);
-  }
-}
 
-a,
-a.plain {
-  text-decoration: underline;
-  text-decoration-color: oklch(from var(--detail) l c h / .5);
-  text-decoration-style: solid;
-  text-decoration-thickness: 2px;
-  text-decoration-skip-ink: none;
-
-  &:hover {
     color: var(--detail);
   }
 
@@ -49,25 +44,25 @@ a:not(.plain) {
 
     text-decoration-color: transparent;
   }
-}
 
-a[target="_blank"],
-a[target="_self"] {
-  &:not(.plain)::before {
-    display: inline-block;
-    content: "x";
+  &[target="_blank"],
+  &[target="_self"] {
+    &::before {
+      display: inline-block;
+      content: "x";
 
-    margin-inline-end: 2px;
-    inline-size: 1em;
+      margin-inline-end: 2px;
+      inline-size: 1em;
 
-    background: currentColor;
+      background: currentColor;
+    }
   }
-}
 
-a[target="_blank"]:not(.plain)::before {
-  mask: var(--xlink) center center / 100% auto no-repeat;
-}
+  &[target="_blank"]::before {
+    mask: var(--xlink) center center / 100% auto no-repeat;
+  }
 
-a[target="_self"]:not(.plain)::before {
-  mask: var(--slink) center center / 100% auto no-repeat;
+  &[target="_self"]::before {
+    mask: var(--slink) center center / 100% auto no-repeat;
+  }
 }
