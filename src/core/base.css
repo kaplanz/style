@@ -46,10 +46,11 @@ body {
     text-align: center;
 
     background: var(--banner);
-  }
 
-  > header {
-    border-block-end: 6px solid var(--lining);
+    border: 6px solid var(--lining);
+    border-radius: 24px;
+
+    margin: 6px;
   }
 
   > main {
@@ -61,10 +62,6 @@ body {
     margin: 0 auto;
 
     transition: inline-size .2s ease;
-  }
-
-  > footer {
-    border-block-start: 6px solid var(--lining);
   }
 
   > main {
