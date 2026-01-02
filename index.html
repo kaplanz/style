@@ -42,12 +42,12 @@
         <div title="orange"></div>
         <div title="yellow"></div>
         <div title="green"></div>
+        <div title="blue"></div>
+        <div title="purple"></div>
         <div title="mint"></div>
         <div title="teal"></div>
         <div title="cyan"></div>
-        <div title="blue"></div>
         <div title="indigo"></div>
-        <div title="purple"></div>
         <div title="pink"></div>
         <div title="brown"></div>
       </div>
@@ -55,28 +55,29 @@
         #colors {
           display: grid;
           gap: 1em;
-          grid-auto-flow: column;
-          grid-auto-columns: 30px;
-          grid-template-rows: repeat(2, 30px);
+          grid-auto-flow: row;
+          grid-auto-rows: 30px;
+          grid-template-columns: repeat(6, 30px);
           padding: 1em;
 
           > div {
             aspect-ratio: 1;
+            background: currentColor;
             border-radius: 25%;
-            box-shadow: 0 2px 4px oklch(0% 0 0 / .2);
+            box-shadow: 2px 2px 1px oklch(from currentColor l c h / .4);
 
-            &[title="red"]    { background: var(--red)    }
-            &[title="orange"] { background: var(--orange) }
-            &[title="yellow"] { background: var(--yellow) }
-            &[title="green"]  { background: var(--green)  }
-            &[title="mint"]   { background: var(--mint)   }
-            &[title="teal"]   { background: var(--teal)   }
-            &[title="cyan"]   { background: var(--cyan)   }
-            &[title="blue"]   { background: var(--blue)   }
-            &[title="indigo"] { background: var(--indigo) }
-            &[title="purple"] { background: var(--purple) }
-            &[title="pink"]   { background: var(--pink)   }
-            &[title="brown"]  { background: var(--brown)  }
+            &[title="red"]    { color: var(--red)    }
+            &[title="orange"] { color: var(--orange) }
+            &[title="yellow"] { color: var(--yellow) }
+            &[title="green"]  { color: var(--green)  }
+            &[title="blue"]   { color: var(--blue)   }
+            &[title="purple"] { color: var(--purple) }
+            &[title="mint"]   { color: var(--mint)   }
+            &[title="teal"]   { color: var(--teal)   }
+            &[title="cyan"]   { color: var(--cyan)   }
+            &[title="indigo"] { color: var(--indigo) }
+            &[title="pink"]   { color: var(--pink)   }
+            &[title="brown"]  { color: var(--brown)  }
           }
         }
       </style>

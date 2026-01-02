@@ -48,7 +48,7 @@ textarea {
 
   border: 2px solid var(--border);
   border-radius: 6px;
-  box-shadow: 2.25px 3px var(--shadow);
+  box-shadow: 2px 2px 1px var(--shadow);
   outline: none;
   padding: 8px;
   margin: 4px;

@@ -23,10 +23,11 @@ pre {
   max-inline-size: 100%;
 
   > code {
-    border: 1px solid var(--border);
+    border: 2px solid var(--border);
     display: block;
     overflow-x: auto;
     padding: 10px;
+    box-shadow: 2px 2px 1px var(--shadow);
   }
 
   &:not(:has(> code)) {
