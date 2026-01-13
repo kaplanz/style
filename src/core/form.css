@@ -84,7 +84,7 @@ textarea {
 
 input[type="file"] {
   background: inherit;
-  border: 1px var(--border) solid;
+  border: 1px var(--accent) solid;
   font: inherit;
 }
 

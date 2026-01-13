@@ -32,7 +32,7 @@ a:not(.plain):not(:has(*)) {
   padding: 0 2px;
 
   background-image: linear-gradient(oklch(from var(--detail) l c h / .3));
-  background-position: left 50% bottom 25%;
+  background-position: left 50% bottom 10%;
   background-repeat: no-repeat;
   background-size: 100% 0;
 

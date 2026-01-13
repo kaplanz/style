@@ -32,9 +32,9 @@
   --darker: color-mix(in oklch, var(--backgd) 88%, light-dark(black, white));
   /* Features */
   --banner: light-dark(oklch(94% 0.05 135), oklch(34% .05 245));
-  --border: var(--accent);
+  --border: var(--darker);
   --marker: var(--yellow);
-  --shadow: light-dark(oklch(0% 0 0 / .2), oklch(40% 0 0 / .2));
+  --shadow: light-dark(oklch(5% 0 0 / .1), transparent);
 
   /*
    * Typefaces

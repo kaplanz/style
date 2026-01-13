@@ -22,10 +22,9 @@ figure {
 
 hr {
   border: none;
-  border-block-start: 2.5px solid var(--border);
+  border-block-start: 2px solid var(--accent);
   border-radius: 1em;
-  box-shadow: 2px 2px 1px var(--shadow);
-  inline-size: 96%;
+  inline-size: 100%;
 }
 
 table {
@@ -98,7 +97,7 @@ details {
   border-radius: 6px;
   overflow: hidden;
 
-  summary {
+  > summary {
     background: var(--darker);
     border-radius: 6px;
     cursor: pointer;
@@ -106,6 +105,16 @@ details {
     outline: none;
     padding: 10px;
     inline-size: 100%;
+  }
+
+  > summary + *:not(summary):last-child {
+    border: none;
+    box-shadow: none;
+  }
+
+  > summary + pre:last-child > code {
+    border: none;
+    box-shadow: none;
   }
 
   & > :last-child {

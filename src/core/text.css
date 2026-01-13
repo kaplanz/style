@@ -9,7 +9,10 @@ h1, h2, h3, h4 {
     "SOFT" 80;
   line-height: 1.2;
   margin-block-end: 0;
-  text-shadow: 2px 2px 1px var(--shadow);
+}
+
+h1, h2 {
+  text-shadow: 2px 2px 1px var(--banner);
 }
 
 h1 {
@@ -39,7 +42,7 @@ h6 {
 p {
   hyphens: auto;
   text-align: justify;
-  margin-block: 1ch;
+  margin-block: 1em;
 }
 
 strong, b {
@@ -68,8 +71,8 @@ blockquote {
 blockquote,
 q {
   background: var(--darken);
-  border-inline-start: 4px solid var(--border);
-  border-radius: 4px 1em 1em 4px;
+  border-inline-start: 4px solid var(--accent);
+  border-radius: 4px;
   margin-inline: 0;
   padding: 1ch;
   overflow: hidden;

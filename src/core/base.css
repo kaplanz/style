@@ -36,8 +36,6 @@ body {
 
   > header,
   > footer {
-    --lining: color-mix(in oklch, var(--banner), var(--backgd));
-
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -47,7 +45,7 @@ body {
 
     background: var(--banner);
 
-    border: 6px solid var(--lining);
+    border: 6px solid color-mix(in oklch, var(--banner), var(--backgd));
     border-radius: 24px;
 
     margin: 6px;
