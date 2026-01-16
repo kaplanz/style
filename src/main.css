@@ -9,21 +9,21 @@
   color-scheme: light dark;
   accent-color: var(--accent);
   /* Rainbow */
-  --red:    light-dark(oklch(65% 0.23 029), oklch(66% 0.22 028));
-  --orange: light-dark(oklch(77% 0.18 063), oklch(78% 0.17 067));
-  --yellow: light-dark(oklch(87% 0.18 090), oklch(88% 0.18 095));
-  --green:  light-dark(oklch(73% 0.19 147), oklch(76% 0.21 147));
-  --blue:   light-dark(oklch(60% 0.22 257), oklch(62% 0.21 255));
-  --purple: light-dark(oklch(61% 0.21 312), oklch(66% 0.23 312));
+  --red:    light-dark(oklch(65% .23 029), oklch(66% .22 028));
+  --orange: light-dark(oklch(77% .18 063), oklch(78% .17 067));
+  --yellow: light-dark(oklch(87% .18 090), oklch(88% .18 095));
+  --green:  light-dark(oklch(73% .19 147), oklch(76% .21 147));
+  --blue:   light-dark(oklch(60% .22 257), oklch(62% .21 255));
+  --purple: light-dark(oklch(61% .21 312), oklch(66% .23 312));
   /* Palette */
-  --mint:   light-dark(oklch(75% 0.13 189), oklch(85% 0.11 192));
-  --teal:   light-dark(oklch(70% 0.11 213), oklch(77% 0.12 212));
-  --cyan:   light-dark(oklch(71% 0.13 234), oklch(82% 0.12 228));
-  --indigo: light-dark(oklch(53% 0.19 278), oklch(56% 0.20 278));
-  --pink:   light-dark(oklch(65% 0.24 018), oklch(66% 0.23 016));
-  --brown:  light-dark(oklch(63% 0.06 073), oklch(67% 0.06 073));
+  --mint:   light-dark(oklch(75% .13 189), oklch(85% .11 192));
+  --teal:   light-dark(oklch(70% .11 213), oklch(77% .12 212));
+  --cyan:   light-dark(oklch(71% .13 234), oklch(82% .12 228));
+  --indigo: light-dark(oklch(53% .19 278), oklch(56% .20 278));
+  --pink:   light-dark(oklch(65% .24 018), oklch(66% .23 016));
+  --brown:  light-dark(oklch(63% .06 073), oklch(67% .06 073));
   /* Accent */
-  --accent: light-dark(oklch(50% .18 14), oklch(65% .20 14));
+  --accent: light-dark(oklch(50% .18 014), oklch(65% .20 014));
   /* Primary */
   --backgd: light-dark(oklch(98% .01 105), oklch(25% .02 245));
   --foregd: light-dark(oklch(34% .05 245), oklch(96% .02 105));
@@ -31,7 +31,7 @@
   --darken: color-mix(in oklch, var(--backgd) 96%, light-dark(black, white));
   --darker: color-mix(in oklch, var(--backgd) 88%, light-dark(black, white));
   /* Features */
-  --banner: light-dark(oklch(94% 0.05 135), oklch(34% .05 245));
+  --banner: light-dark(oklch(94% .05 135), oklch(34% .05 245));
   --border: var(--darker);
   --marker: var(--yellow);
   --shadow: light-dark(oklch(5% 0 0 / .1), transparent);
