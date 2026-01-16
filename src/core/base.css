@@ -11,6 +11,7 @@ body {
   overflow-x: clip;
 
   scroll-behavior: smooth;
+  scrollbar-color: oklch(from var(--accent) l c h / .5) var(--banner);
   scrollbar-gutter: stable both-edges;
   scrollbar-width: thin;
 }
