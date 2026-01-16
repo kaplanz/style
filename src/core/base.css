@@ -11,6 +11,7 @@ body {
   overflow-x: clip;
 
   scroll-behavior: smooth;
+  scrollbar-color: var(--accent) var(--banner);
   scrollbar-gutter: stable both-edges;
   scrollbar-width: thin;
 }
