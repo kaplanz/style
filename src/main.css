@@ -8,32 +8,32 @@
    */
   color-scheme: light dark;
   accent-color: var(--accent);
-  /* Rainbow */
-  --red:    light-dark(oklch(65% .23 029), oklch(66% .22 028));
-  --orange: light-dark(oklch(77% .18 063), oklch(78% .17 067));
-  --yellow: light-dark(oklch(87% .18 090), oklch(88% .18 095));
-  --green:  light-dark(oklch(73% .19 147), oklch(76% .21 147));
-  --blue:   light-dark(oklch(60% .22 257), oklch(62% .21 255));
-  --purple: light-dark(oklch(61% .21 312), oklch(66% .23 312));
-  /* Palette */
-  --mint:   light-dark(oklch(75% .13 189), oklch(85% .11 192));
-  --teal:   light-dark(oklch(70% .11 213), oklch(77% .12 212));
-  --cyan:   light-dark(oklch(71% .13 234), oklch(82% .12 228));
-  --indigo: light-dark(oklch(53% .19 278), oklch(56% .20 278));
-  --pink:   light-dark(oklch(65% .24 018), oklch(66% .23 016));
-  --brown:  light-dark(oklch(63% .06 073), oklch(67% .06 073));
+  /* Base */
+  --red:     light-dark(oklch(52% .17 000), oklch(70% .14 000));
+  --green:   light-dark(oklch(57% .11 125), oklch(74% .12 125));
+  --yellow:  light-dark(oklch(53% .12 050), oklch(70% .12 050));
+  --blue:    light-dark(oklch(39% .09 250), oklch(57% .11 250));
+  --magenta: light-dark(oklch(53% .19 295), oklch(70% .13 295));
+  --cyan:    light-dark(oklch(57% .09 185), oklch(74% .10 185));
+  /* Bright */
+  --br-red:     light-dark(oklch(61% .14 015), oklch(79% .09 015));
+  --br-green:   light-dark(oklch(61% .11 125), oklch(79% .13 125));
+  --br-yellow:  light-dark(oklch(61% .10 085), oklch(79% .11 085));
+  --br-blue:    light-dark(oklch(70% .09 210), oklch(87% .07 210));
+  --br-magenta: light-dark(oklch(61% .15 295), oklch(79% .09 295));
+  --br-cyan:    light-dark(oklch(61% .08 185), oklch(79% .10 185));
   /* Accent */
-  --accent: light-dark(oklch(50% .18 014), oklch(65% .20 014));
+  --accent: var(--cyan);
   /* Primary */
-  --backgd: light-dark(oklch(98% .01 105), oklch(25% .02 245));
-  --foregd: light-dark(oklch(34% .05 245), oklch(96% .02 105));
+  --backgd: light-dark(oklch(97% .01 085), oklch(18% .02 235));
+  --foregd: light-dark(oklch(28% .02 235), oklch(88% .01 085));
   /* Layer */
   --darken: color-mix(in oklch, var(--backgd) 96%, light-dark(black, white));
   --darker: color-mix(in oklch, var(--backgd) 88%, light-dark(black, white));
   /* Features */
-  --banner: light-dark(oklch(94% .05 135), oklch(34% .05 245));
+  --banner: oklch(from var(--accent) l c h / .2);
   --border: var(--darker);
-  --marker: var(--yellow);
+  --marker: var(--br-yellow);
   --shadow: light-dark(oklch(5% 0 0 / .1), transparent);
 
   /*

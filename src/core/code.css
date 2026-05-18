@@ -4,6 +4,22 @@ pre,
 samp,
 time {
   font: normal 14px var(--mono);
+  font-feature-settings:
+    /* -- contextual alternatives -- */
+    "calt",
+    /* -- character variants -- */
+    /* zero: 0 */
+    "zero",
+    /* cv01: @ # $ % & Q -> => */
+    "cv01",
+    /* cv03: i */
+    "cv03",
+    /* -- stylistic sets -- */
+    /* ss03: [trace] [debug] [info] [warn] [error] [fatal] [todo] [fixme] */
+    "ss03",
+    /* ss08: >>= -<< ->> >- */
+    "ss08";
+  font-variation-settings: "wght" 500;
 }
 
 code,
