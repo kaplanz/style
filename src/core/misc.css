@@ -9,6 +9,7 @@ video {
   border-radius: 6px;
   block-size: auto;
   max-inline-size: 100%;
+  image-rendering: pixelated;
 }
 
 figure {
