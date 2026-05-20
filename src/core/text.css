@@ -12,7 +12,14 @@ h1, h2, h3, h4 {
 }
 
 h1, h2 {
-  text-shadow: .05em .05em 0 oklch(from var(--accent) l c h / .6);
+  --shadow: oklch(from var(--accent) l c h / .6);
+
+  text-shadow: .05em .05em 0 var(--shadow);
+  transition: text-shadow .2s;
+
+  &:has(a:hover) {
+    text-shadow: 0 0 0 var(--shadow);
+  }
 }
 
 h1 {
