@@ -1,3 +1,8 @@
+* {
+  scrollbar-color: oklch(from var(--accent) l c h / .5) var(--banner);
+  scrollbar-width: thin;
+}
+
 html,
 body {
   max-inline-size: 100dvi;
@@ -11,9 +16,7 @@ body {
   overflow-x: clip;
 
   scroll-behavior: smooth;
-  scrollbar-color: oklch(from var(--accent) l c h / .5) var(--banner);
   scrollbar-gutter: stable both-edges;
-  scrollbar-width: thin;
 }
 
 body {
