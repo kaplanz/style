@@ -7,12 +7,10 @@ dl {
 table {
   display: block;
 
-  border: 2px solid var(--border);
   border-spacing: 0;
-  border-radius: 6px;
-  box-shadow: 2px 2px 1px var(--shadow);
 
   inline-size: fit-content;
+  margin-block: 1em;
   margin-inline: auto;
   max-inline-size: 100%;
   min-inline-size: min(320px, 100%);
@@ -42,45 +40,70 @@ table {
     }
   }
 
-  thead {
-    border-block-end: 1px solid var(--border);
-  }
-
-  tfoot {
-    border-block-start: 1px solid var(--border);
-  }
-
-  thead,
-  tfoot {
-    tr {
-      background: var(--darker);
-    }
-  }
-
-  tbody {
-    tr:nth-child(even) {
-      background: var(--darken);
-    }
-    tr:nth-child(odd) {
-      background: var(--backgd);
-    }
-    tr:hover {
-      background: color-mix(in srgb, var(--darker) 95%, var(--accent));
-    }
-  }
-
   th,
   td {
-    cursor: cell;
-    padding: 8px;
+    border-block-end: 1px solid oklch(from currentColor l c h / .1);
+    padding-block: 4px;
+    padding-inline-start: 1ch;
     text-align: start;
-    vertical-align: middle;
+    vertical-align: baseline;
 
     &:first-child {
-      padding-inline-start: 1em;
+      padding-inline-start: 0;
     }
-    &:last-child {
-      padding-inline-end: 1em;
+    &:last-child:not(:first-child) {
+      text-align: end;
+    }
+  }
+
+  &:not(.plain) {
+    border: 2px solid var(--border);
+    border-radius: 6px;
+    box-shadow: 2px 2px 1px var(--shadow);
+
+    thead {
+      border-block-end: 1px solid var(--border);
+    }
+
+    tfoot {
+      border-block-start: 1px solid var(--border);
+    }
+
+    thead,
+    tfoot {
+      tr {
+        background: var(--darker);
+      }
+    }
+
+    tbody {
+      tr:nth-child(even) {
+        background: var(--darken);
+      }
+      tr:nth-child(odd) {
+        background: var(--backgd);
+      }
+      tr:hover {
+        background: color-mix(in srgb, var(--darker) 95%, var(--accent));
+      }
+    }
+
+    th,
+    td {
+      border-block-end: none;
+      cursor: cell;
+      padding: 8px;
+      vertical-align: middle;
+
+      &:first-child {
+        padding-inline-start: 1em;
+      }
+      &:last-child {
+        padding-inline-end: 1em;
+      }
+      &:last-child:not(:first-child) {
+        text-align: start;
+      }
     }
   }
 }
