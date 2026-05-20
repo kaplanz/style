@@ -25,44 +25,44 @@ a {
   &:active {
     transform: translateY(2px);
   }
-}
 
-a:not(.plain):not(:has(*)) {
-  margin: 0 -2px;
-  padding: 0 2px;
+  &:not(.plain):not(:has(*)) {
+    margin: 0 -2px;
+    padding: 0 2px;
 
-  background-image: linear-gradient(oklch(from var(--detail) l c h / .3));
-  background-position: left 50% bottom 10%;
-  background-repeat: no-repeat;
-  background-size: 100% 0;
+    background-image: linear-gradient(oklch(from var(--detail) l c h / .3));
+    background-position: left 50% bottom 10%;
+    background-repeat: no-repeat;
+    background-size: 100% 0;
 
-  &:hover {
-    border-radius: 4px;
+    &:hover {
+      border-radius: 4px;
 
-    background-position: center bottom;
-    background-size: 100% 100%;
+      background-position: center bottom;
+      background-size: 100% 100%;
 
-    text-decoration-color: transparent;
-  }
-
-  &[target="_blank"],
-  &[target="_self"] {
-    &::before {
-      display: inline-block;
-      content: "x";
-
-      margin-inline-end: 2px;
-      inline-size: 1em;
-
-      background: currentColor;
+      text-decoration-color: transparent;
     }
-  }
 
-  &[target="_blank"]::before {
-    mask: var(--xlink) center center / 100% auto no-repeat;
-  }
+    &[target="_blank"],
+    &[target="_self"] {
+      &::before {
+        display: inline-block;
+        content: "x";
 
-  &[target="_self"]::before {
-    mask: var(--slink) center center / 100% auto no-repeat;
+        margin-inline-end: 2px;
+        inline-size: 1em;
+
+        background: currentColor;
+      }
+    }
+
+    &[target="_blank"]::before {
+      mask: var(--xlink) center center / 100% auto no-repeat;
+    }
+
+    &[target="_self"]::before {
+      mask: var(--slink) center center / 100% auto no-repeat;
+    }
   }
 }
