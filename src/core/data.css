@@ -1,0 +1,68 @@
+dl {
+  dt {
+    font-weight: bold;
+  }
+}
+
+table {
+  border: 2px solid var(--border);
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 6px;
+  box-shadow: 2px 2px 1px var(--shadow);
+  margin-block-end: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  inline-size: 100%;
+
+  caption {
+    text-align: start;
+  }
+
+  thead {
+    border-block-end: 1px solid var(--border);
+  }
+
+  tfoot {
+    border-block-start: 1px solid var(--border);
+  }
+
+  thead,
+  tfoot {
+    tr {
+      background: var(--darker);
+    }
+  }
+
+  tbody {
+    tr:nth-child(even) {
+      background: var(--darken);
+    }
+    tr:nth-child(odd) {
+      background: var(--backgd);
+    }
+    tr:hover {
+      background: color-mix(in srgb, var(--darker) 95%, var(--accent));
+    }
+  }
+
+  th,
+  td {
+    cursor: cell;
+    padding: 8px;
+    text-align: start;
+    vertical-align: middle;
+
+    max-inline-size: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    &:first-child {
+      padding-inline-start: 1em;
+    }
+    &:last-child {
+      padding-inline-end: 1em;
+    }
+  }
+}
