@@ -16,7 +16,6 @@ table {
   min-inline-size: min(320px, 100%);
 
   overflow: auto hidden;
-  overscroll-behavior-x: none;
   white-space: nowrap;
 
   caption {
