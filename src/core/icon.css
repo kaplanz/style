@@ -1,0 +1,7 @@
+img:is(.icon, .icon *) {
+  filter:
+    drop-shadow( 1px  0px 0px white)
+    drop-shadow(-1px  0px 0px white)
+    drop-shadow( 0px  1px 0px white)
+    drop-shadow( 0px -1px 0px white);
+}
