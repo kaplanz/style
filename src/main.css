@@ -1,54 +1,60 @@
-@import "core/index.css";
-@import "font/index.css";
-@import "part/index.css";
+@layer style.core;
+@layer style.font;
+@layer style.part;
 
-:root {
-  /*
-   * Colors
-   */
-  color-scheme: light dark;
-  accent-color: var(--accent);
-  /* Base */
-  --red:     light-dark(oklch(52% .17 000), oklch(70% .14 000));
-  --green:   light-dark(oklch(57% .11 125), oklch(74% .12 125));
-  --yellow:  light-dark(oklch(53% .12 050), oklch(70% .12 050));
-  --blue:    light-dark(oklch(39% .09 250), oklch(57% .11 250));
-  --magenta: light-dark(oklch(53% .19 295), oklch(70% .13 295));
-  --cyan:    light-dark(oklch(57% .09 185), oklch(74% .10 185));
-  /* Bright */
-  --br-red:     light-dark(oklch(61% .14 015), oklch(79% .09 015));
-  --br-green:   light-dark(oklch(61% .11 125), oklch(79% .13 125));
-  --br-yellow:  light-dark(oklch(61% .10 085), oklch(79% .11 085));
-  --br-blue:    light-dark(oklch(70% .09 210), oklch(87% .07 210));
-  --br-magenta: light-dark(oklch(61% .15 295), oklch(79% .09 295));
-  --br-cyan:    light-dark(oklch(61% .08 185), oklch(79% .10 185));
-  /* Accent */
-  --accent: var(--cyan);
-  /* Primary */
-  --backgd: light-dark(oklch(97% .01 085), oklch(18% .02 235));
-  --foregd: light-dark(oklch(28% .02 235), oklch(88% .01 085));
-  /* Layer */
-  --darken: color-mix(in oklch, var(--backgd) 96%, light-dark(black, white));
-  --darker: color-mix(in oklch, var(--backgd) 88%, light-dark(black, white));
-  /* Features */
-  --banner: oklch(from var(--accent) l c h / .2);
-  --border: var(--darker);
-  --marker: var(--br-yellow);
-  --shadow: light-dark(oklch(5% 0 0 / .1), transparent);
+@import "core/index.css" layer(style.core);
+@import "font/index.css" layer(style.font);
+@import "part/index.css" layer(style.part);
 
-  /*
-   * Typefaces
-   */
-  --mono:  "Maple Mono";
-  --sans:  "Geologica";
-  --serif: "Fraunces";
+@layer style.core {
+  :root {
+    /*
+     * Colors
+     */
+    color-scheme: light dark;
+    accent-color: var(--accent);
+    /* Base */
+    --red:     light-dark(oklch(52% .17 000), oklch(70% .14 000));
+    --green:   light-dark(oklch(57% .11 125), oklch(74% .12 125));
+    --yellow:  light-dark(oklch(53% .12 050), oklch(70% .12 050));
+    --blue:    light-dark(oklch(39% .09 250), oklch(57% .11 250));
+    --magenta: light-dark(oklch(53% .19 295), oklch(70% .13 295));
+    --cyan:    light-dark(oklch(57% .09 185), oklch(74% .10 185));
+    /* Bright */
+    --br-red:     light-dark(oklch(61% .14 015), oklch(79% .09 015));
+    --br-green:   light-dark(oklch(61% .11 125), oklch(79% .13 125));
+    --br-yellow:  light-dark(oklch(61% .10 085), oklch(79% .11 085));
+    --br-blue:    light-dark(oklch(70% .09 210), oklch(87% .07 210));
+    --br-magenta: light-dark(oklch(61% .15 295), oklch(79% .09 295));
+    --br-cyan:    light-dark(oklch(61% .08 185), oklch(79% .10 185));
+    /* Accent */
+    --accent: var(--cyan);
+    /* Primary */
+    --backgd: light-dark(oklch(97% .01 085), oklch(18% .02 235));
+    --foregd: light-dark(oklch(28% .02 235), oklch(88% .01 085));
+    /* Layer */
+    --darken: color-mix(in oklch, var(--backgd) 96%, light-dark(black, white));
+    --darker: color-mix(in oklch, var(--backgd) 88%, light-dark(black, white));
+    /* Features */
+    --banner: oklch(from var(--accent) l c h / .2);
+    --border: var(--darker);
+    --marker: var(--br-yellow);
+    --shadow: light-dark(oklch(5% 0 0 / .1), transparent);
 
-  /*
-   * Shapes
-   */
-  --vmark: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 17" width="19" height="17" fill="none"><path d="M2 9L7 15" stroke="black" stroke-width="4" stroke-linecap="round" /><path d="M7 15L17 2" stroke="black" stroke-width="4" stroke-linecap="round" /></svg>');
-  --xlink: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"></path></svg>');
-  --slink: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>');
+    /*
+     * Typefaces
+     */
+    --mono:  "Maple Mono";
+    --sans:  "Geologica";
+    --serif: "Fraunces";
+
+    /*
+     * Shapes
+     */
+    --vmark: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 17" width="19" height="17" fill="none"><path d="M2 9L7 15" stroke="black" stroke-width="4" stroke-linecap="round" /><path d="M7 15L17 2" stroke="black" stroke-width="4" stroke-linecap="round" /></svg>');
+    --xlink: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z"></path></svg>');
+    --slink: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg>');
+  }
 }
 
 @media not (prefers-reduced-motion: reduce) {

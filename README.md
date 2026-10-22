@@ -12,6 +12,14 @@ hosted version of the stylesheet, like such:
 I host a complementary version on my personal content delivery network,
 available [here][cdndev].
 
+These styles are defined within a single cascade layer named `style`, so a
+site's own unlayered rules will always take precedence over them, regardless of
+specificity. A site that uses layers of its own can order them after it:
+
+```css
+@layer style, site;
+```
+
 ## Development
 
 It is pretty straightforward to develop styles for yourself, as the included CSS
